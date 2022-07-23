@@ -9,6 +9,8 @@
 
 # Ejercicios con lambda
 
+from os import system
+system('cls')
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
@@ -18,7 +20,9 @@ if __name__ == '__main__':
     # Realizar una funcion lambda que retorne el tamaño
     # (len) de un string pasado como parámetro
 
-    # len_string = lambda......
+    len_string = lambda x: len(x)
+    string = str(input('ingrese una palabra cualquiera: '))
+    print(f'Su palabra tiene {len_string(string)} caracteres')
 
     # 2)
     # Lista de string
@@ -35,5 +39,10 @@ if __name__ == '__main__':
     # directamente la lambda.
 
     # palabras_len = list(map....)
+
+    palabras_len = list(map(lambda x: len(str(x)), palabras))
+    print('\nLista "palabras":')
+    print(palabras)
+    print(f'Cada palabra dentro de la lista "palabras" tiene {palabras_len} caracteres respectivamente\n')
 
     print("terminamos")
